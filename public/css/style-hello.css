@@ -1,0 +1,13 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #33313b;
+  background-color: #f6f5f5;
+}
+
+a {
+	color: #4592af;
+}
+
+li a {
+	font-weight: bold;
+}
