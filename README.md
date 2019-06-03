@@ -17,3 +17,5 @@ Welcome to Ruby Virtual Reality. This blueprint is meant to help you build cyber
 * Flow > Graphics
 * Interacting > Watching
 * Connected > Lonely
+
+But give it some time. It just started! ^_^
