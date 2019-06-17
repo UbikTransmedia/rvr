@@ -13,3 +13,7 @@ a {
 li a {
 	font-weight: bold;
 }
+
+li {
+	margin-bottom: 5px;
+}
