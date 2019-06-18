@@ -23,7 +23,7 @@ module DataBaseHelper
 
 	def DataBaseHelper.build
 		ActiveRecord::Schema.define do
-			create_table :floating_messages do |t|
+			create_table :messages do |t|
 				t.column :message, :string
 				t.column :author, :string
 				t.column :x, :integer
@@ -32,4 +32,7 @@ module DataBaseHelper
 			end
 		end
 	end
+
 end
+
+

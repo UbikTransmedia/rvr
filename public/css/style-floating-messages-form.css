@@ -1,0 +1,39 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  color: #33313b;
+  background-color: #f6f5f5;
+  padding:50px;
+  margin:0px;
+}
+
+a {
+	color: #4592af;
+}
+
+li a {
+	font-weight: bold;
+}
+
+li {
+	margin-bottom: 5px;
+}
+
+form {
+	max-width: 300px;
+}
+label, input{
+	display: block !important;
+	margin-bottom: 5px;
+	width: 100%;
+	padding: 3px;
+}
+
+input[type="submit"] {
+	margin-top: 15px;
+	width: 50%;
+
+}
+
+div.submit-holder {
+	text-align: center !important;
+}

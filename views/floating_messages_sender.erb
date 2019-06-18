@@ -1,15 +1,39 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Floating Messages (Sender)</title>
+	<meta charset="ISO-8859-1">
+	<link rel="stylesheet" type="text/css" href="css/style-floating-messages-form.css">
 </head>
-<body>
-<h1>Floating Messages</h1>
-<h2>Sender</h2>
 
-<form>
-	
-</form>
+<body>
+
+	<h1>Floating Messages</h1>
+	<h2>Sender</h2>
+
+	<form method="post" action="/floating-messages">
+
+		<label for="message">Message</label>
+		<input type="text" name="message">
+
+		<label for="author">Author</label>
+		<input type="text" name="author">
+
+		<label for="x">X Position</label>
+		<input type="text" name="x">
+
+		<label for="y">Y Position</label>
+		<input type="text" name="y">
+
+		<label for="z">Z Position</label>
+		<input type="text" name="z">
+
+		<div class="submit-holder">
+		<input type="submit" name= "send" value="Send to DB">
+		</div>
+
+	</form>
 
 </body>
 </html>

@@ -9,12 +9,12 @@ puts "RVR 0.3 - Guillem Carbonell - g@ubik.bz - 2019"
 require 'sinatra'
 require 'active_record'
 require 'sqlite3'
-require_relative 'modules/dbhelper'
+require_relative 'blocks/db_helper'
+require_relative 'blocks/db_models'
 
 # Start setup
 
 DataBaseHelper.setup
-
 
 # --- Simple routes
 
@@ -32,12 +32,27 @@ get '/floating-messages' do
 	erb :floating_messages
 end
 
-post '/floating-messages' do
-end
-
 get '/floating-messages-sender' do
 	erb :floating_messages_sender
 end
 
+post '/floating-messages' do
+	Message.create(
+		message: params['message'].to_s,
+		author: params['author'].to_s,
+		x: params['x'].to_i,
+		y: params['y'].to_i,
+		z: params['z'].to_i)
+	erb :floating_messages_sender
+end
 
-# JQuery for Floating Messages
+get '/floating-messages-update' do
+	if request.xhr? then
+		%q{<a-box position="0 0 0"></a-box>
+}
+	else
+		"<h1>That doesn't look like an Ajax request :(</h1>"
+	end
+end
+
+
