@@ -9,14 +9,16 @@ puts "RVR 0.3 - Guillem Carbonell - g@ubik.bz - 2019"
 require 'sinatra'
 require 'active_record'
 require 'sqlite3'
+require 'json'
 require_relative 'blocks/db_helper'
 require_relative 'blocks/db_models'
+require_relative 'blocks/randos'
 
 # Start setup
 
 DataBaseHelper.setup
 
-# --- Simple routes
+# ---------------------------------------------------------------------- Simple routes
 
 get '/'  do
 	erb :hello
@@ -26,30 +28,50 @@ get '/basic' do
 	erb :basic
 end
 
-# --- Floating Messages: jQuery+SQLite for VR
+# ---------------------------------------------------------------------- Holodeck Cargo Cult: jQuery+SQLite for VR
 
-get '/floating-messages' do
-	erb :floating_messages
+get '/cargos' do
+	erb :cargos
 end
 
-get '/floating-messages-sender' do
-	erb :floating_messages_sender
+get '/cargo-sender' do
+	erb :cargo_sender
 end
 
-post '/floating-messages' do
-	Message.create(
-		message: params['message'].to_s,
-		author: params['author'].to_s,
-		x: params['x'].to_i,
-		y: params['y'].to_i,
-		z: params['z'].to_i)
-	erb :floating_messages_sender
+post '/cargo-sender' do
+	Cargo.create(
+		code: params['cargo'].to_s,
+		active: true,
+		author: params['author'].to_s)
+	erb :cargo_sender
 end
 
-get '/floating-messages-update' do
+post '/cargos-update' do
 	if request.xhr? then
-		%q{<a-box position="0 0 0"></a-box>
-}
+		cargo_delivery = {}
+		puts params.inspect
+		params["IDs"].each do |client_id|
+			begin
+				if Cargo.find(client_id) then
+					cargo_delivery[client_id] = ''						#CASE A: confirm symmetry client-DB: add the key, not the code
+					puts "Cargo - already exists: #{client_id}"
+				end
+			rescue
+				puts "Cargo - to be removed: #{client_id}"				#CASE B: confirm asymmetry client-DB; client will have to remove its ID: add nothing
+			end		
+		end
+		Cargo.all.each do |cargo|
+			begin
+				if !(params["IDs"].include? cargo.id.to_s) then
+					cargo_delivery[cargo.id] = cargo.code				#CASE C: confirm asymmetry DB-client; add the key, add the code
+					puts "Cargo - to be added: #{cargo.id}"
+				end
+			rescue
+				puts "Wrong cargo ID from server: #{cargo.id}"
+			end
+		end
+		# return Randos.test_cube
+		return cargo_delivery.to_json
 	else
 		"<h1>That doesn't look like an Ajax request :(</h1>"
 	end

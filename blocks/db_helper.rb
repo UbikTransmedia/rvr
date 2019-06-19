@@ -23,12 +23,10 @@ module DataBaseHelper
 
 	def DataBaseHelper.build
 		ActiveRecord::Schema.define do
-			create_table :messages do |t|
-				t.column :message, :string
+			create_table :cargos do |t|
+				t.column :code, :string
+				t.column :active, :boolean
 				t.column :author, :string
-				t.column :x, :integer
-				t.column :y, :integer
-				t.column :z, :integer
 			end
 		end
 	end

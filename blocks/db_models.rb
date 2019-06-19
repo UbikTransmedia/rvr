@@ -1,3 +1,3 @@
-class Message < ActiveRecord::Base
+class Cargo < ActiveRecord::Base
 end
 
