@@ -5,7 +5,7 @@
 
 # Start loads
 
-puts "RVR 0.3 - Guillem Carbonell - g@ubik.bz - 2019"
+puts "RVR 0.4 - Guillem Carbonell - g@ubik.bz - 2019"
 require 'sinatra'
 require 'active_record'
 require 'sqlite3'

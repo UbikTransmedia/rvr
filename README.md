@@ -1,4 +1,4 @@
-*RVR 0.1.2 - Guillem Carbonell - g@ubik.bz - 2019*
+*RVR 0.4 - Guillem Carbonell - g@ubik.bz - 2019*
 
 Hello WoVRd!
 ============
