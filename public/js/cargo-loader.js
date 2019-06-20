@@ -1,11 +1,11 @@
+	/* Chech owned cargos' IDs */
+	var cargoListing = {"IDs": [1,2]};
+
 	function UpdateCargos(){
 		console.log('ups');
 
-		/* Chech owned cargos' IDs */
-		var data = {"IDs": [1,7]};
-
 		/* Send IDs list */
-	    $.post("/cargos-update", data, function(responseCargos,statusTxt,xhr){
+	    $.post("/cargos-update", cargoListing, function(responseCargos,statusTxt,xhr){
 
 	    	/* Retrieve cargos */
 	     	if(statusTxt=="success") {
@@ -21,6 +21,8 @@
 				var JSONCargos = JSON.parse(responseCargos);
 				for (var key in JSONCargos){
 
+					var divClass = 'cargo-'+key;
+
 
 					/* PENDING: check wether:
 						implement cargo tracker: (IDs array that changes dinamically)
@@ -29,6 +31,26 @@
 						client has ID that server does not: remove div-ID
 
 					*/
+
+					if(cargoListing["IDs"].includes(key) == true){
+						console.log('Already here: '+divClass);
+					};
+
+					if(cargoListing["IDs"].includes(key) == false){
+						var div = document.createElement('div');
+						div.classList.add(divClass);
+						div.innerHTML = JSON.stringify(JSONCargos[key]);
+						document.getElementById("holodeck").appendChild(div.firstChild);
+						cargoListing["IDs"].push(key);
+						console.log('Added: '+divClass);
+
+
+					};
+
+					if(Object.keys(JSONCargos["IDs"]).includes(key) == false){
+						$(divClass).remove();
+						console.log('Removed: '+divClass);
+					};
 
 
 					/*var value = JSONCargos[key];
