@@ -53,7 +53,7 @@
 					};
 
 
-					/*var value = JSONCargos[key];
+					/* var value = JSONCargos[key];
 					console.log('key: '+key);
 					console.log('value: '+value);
 					document.write("<br> - " + key + ": " + value);*/
