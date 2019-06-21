@@ -5,7 +5,7 @@
 
 # Start loads
 
-puts "RVR 0.4 - Guillem Carbonell - g@ubik.bz - 2019"
+puts "RVR 0.5 - Guillem Carbonell - g@ubik.bz - 2019"
 require 'sinatra'
 require 'active_record'
 require 'sqlite3'
@@ -30,8 +30,8 @@ end
 
 # ---------------------------------------------------------------------- Holodeck Cargo Cult: jQuery+SQLite for VR
 
-get '/cargos' do
-	erb :cargos
+get '/holodeck' do
+	erb :holodeck
 end
 
 get '/cargo-sender' do
@@ -51,18 +51,26 @@ post '/cargos-update' do
 		cargo_delivery = {}
 		puts params.inspect
 
-		if params["IDs"] == nil then params["IDs"] == [] end
+		#sanitize ---> to be fixed: when params == false, nil, etc. Review this.
+		if params.class == FalseClass then params == {"IDs" => [0]} end
+		if params["IDs"] == nil then params == {"IDs" => [0]} end
+
+		puts params["IDs"].class
+		puts params["IDs"].inspect
 
 		unless params["IDs"] == nil || params["IDs"].empty? then
 			params["IDs"].each do |client_id|
-				begin
-					if Cargo.find(client_id) then
-						cargo_delivery[client_id] = ''						#CASE A: confirm symmetry client-DB: add the key, not the code
-						puts "Cargo - already exists: #{client_id}"
+				puts client_id.class
+				unless client_id == '0' then
+					begin
+						if Cargo.find(client_id) then
+							cargo_delivery[client_id] = ''						#CASE A: confirm symmetry client-DB: add the key, not the code
+							puts "Cargo - already exists: #{client_id}"
+						end
+					rescue
+						puts "Cargo - to be removed: #{client_id}"				#CASE B: confirm asymmetry client-DB; client will have to remove its ID: add nothing
 					end
-				rescue
-					puts "Cargo - to be removed: #{client_id}"				#CASE B: confirm asymmetry client-DB; client will have to remove its ID: add nothing
-				end		
+				end	
 			end
 		end
 

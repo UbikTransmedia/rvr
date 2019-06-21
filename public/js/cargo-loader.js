@@ -1,8 +1,8 @@
 	/* Chech owned cargos' IDs */
-	var cargoListing = {"IDs": [1,2]};
+	var cargoListing = {"IDs": [0]};
 
 	function UpdateCargos(){
-		console.log('ups');
+		console.log('Updating cargos...');
 
 		/* Send IDs list */
 	    $.post("/cargos-update", cargoListing, function(responseCargos,statusTxt,xhr){
@@ -13,50 +13,51 @@
 
 	     		/* Discern wether to add, keep or remove */
 
+				var jsonCargosFromServer = JSON.parse(responseCargos);
 
-	      		/*jQuery.each(responseCargos, function(i, val) {
-  					$("#" + i).append(document.createTextNode(" - " + val));
-				 });*/
+				// for (var key in jsonCargosFromServer)
+				// console.log(jsonCargosFromServer);
+				Object.keys(jsonCargosFromServer).forEach(function(key) {
 
-				var JSONCargos = JSON.parse(responseCargos);
-				for (var key in JSONCargos){
-
+					// console.log('im at key '+key+'  ->'+jsonCargosFromServer[key]);
 					var divClass = 'cargo-'+key;
 
 
-					/* PENDING: check wether:
-						implement cargo tracker: (IDs array that changes dinamically)
-						client already has ID: do nothing.
-						client does not have ID: add code.
-						client has ID that server does not: remove div-ID
-
-					*/
-
-					if(cargoListing["IDs"].includes(key) == true){
+					if(cargoListing["IDs"].includes(key) == true && jsonCargosFromServer[key] != ''){
 						console.log('Already here: '+divClass);
 					};
 
-					if(cargoListing["IDs"].includes(key) == false){
+					if(cargoListing["IDs"].includes(key) == false && jsonCargosFromServer[key] != ''){
 						var div = document.createElement('div');
-						div.classList.add(divClass);
-						div.innerHTML = JSON.stringify(JSONCargos[key]);
+						/*div.classList.add(divClass);*/
+						/*var sanitizedContent = JSON.stringify(jsonCargosFromServer[key]);*/
+						div.innerHTML = jsonCargosFromServer[key];
+						/*div.innerHTML.firstChild.classList.add(divClass);*/
 						document.getElementById("holodeck").appendChild(div.firstChild);
 						cargoListing["IDs"].push(key);
-						console.log('Added: '+divClass);
+
+						// console.log('jsonCargosFromServer[key]: ' + typeof jsonCargosFromServer[key]);
+						// console.log(jsonCargosFromServer[key]);
+						/*console.log('sanitizedContent: ' + typeof sanitizedContent);
+						console.log(sanitizedContent);*/
+						// console.log('div: ' + typeof div);
+						// console.log(div);
+						// console.log('Added: '+divClass);
 
 
 					};
 
-					if(Object.keys(JSONCargos["IDs"]).includes(key) == false){
+				});
+
+
+				for (var id = 0; id < cargoListing["IDs"]; id++) {
+					// console.log('last: '+Object.keys(jsonCargosFromServer));
+					var divClass = 'cargo-'+key;
+					if(Object.keys(jsonCargosFromServer).includes(key) == false){
 						$(divClass).remove();
 						console.log('Removed: '+divClass);
 					};
 
-
-					/* var value = JSONCargos[key];
-					console.log('key: '+key);
-					console.log('value: '+value);
-					document.write("<br> - " + key + ": " + value);*/
 				};
 
 
@@ -65,6 +66,7 @@
 	     		// document.getElementById("holodeck").appendChild(div.firstChild);*/
 	     		
 	     	};
+
 	     	if(statusTxt=="error") console.log("Error cargo: "+xhr.status+": "+xhr.statusText);
 	    });
 	};

@@ -1,51 +1,80 @@
-D, [2019-06-20T19:49:25.164754 #4824] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-D, [2019-06-20T19:49:25.171806 #4824] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-D, [2019-06-20T19:49:25.172737 #4824] DEBUG -- :   [1m[36mCargo Load (0.1ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
-D, [2019-06-20T19:49:26.099426 #4824] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-D, [2019-06-20T19:49:26.100413 #4824] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-D, [2019-06-20T19:49:26.101247 #4824] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-D, [2019-06-20T19:49:26.102123 #4824] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
-D, [2019-06-20T19:49:27.099677 #4824] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-D, [2019-06-20T19:49:27.100772 #4824] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-D, [2019-06-20T19:49:27.101730 #4824] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-D, [2019-06-20T19:49:27.103809 #4824] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
-D, [2019-06-20T19:49:28.103565 #4824] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-D, [2019-06-20T19:49:28.104429 #4824] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-D, [2019-06-20T19:49:28.105220 #4824] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-D, [2019-06-20T19:49:28.106123 #4824] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
-D, [2019-06-20T19:49:29.097698 #4824] DEBUG -- :   [1m[36mCargo Load (0.4ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-D, [2019-06-20T19:49:29.098518 #4824] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-D, [2019-06-20T19:49:29.099276 #4824] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-D, [2019-06-20T19:49:29.100338 #4824] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
-D, [2019-06-20T19:49:30.092216 #4824] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-D, [2019-06-20T19:49:30.093040 #4824] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-D, [2019-06-20T19:49:30.093753 #4824] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-D, [2019-06-20T19:49:30.094533 #4824] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
-D, [2019-06-20T19:49:31.096862 #4824] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-D, [2019-06-20T19:49:31.097802 #4824] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-D, [2019-06-20T19:49:31.098716 #4824] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-D, [2019-06-20T19:49:31.100169 #4824] DEBUG -- :   [1m[36mCargo Load (0.5ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
-D, [2019-06-20T19:49:32.095274 #4824] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-D, [2019-06-20T19:49:32.096058 #4824] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-D, [2019-06-20T19:49:32.096817 #4824] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-D, [2019-06-20T19:49:32.097621 #4824] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
-D, [2019-06-20T19:49:33.102207 #4824] DEBUG -- :   [1m[36mCargo Load (0.6ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-D, [2019-06-20T19:49:33.103409 #4824] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-D, [2019-06-20T19:49:33.104235 #4824] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-D, [2019-06-20T19:49:33.105635 #4824] DEBUG -- :   [1m[36mCargo Load (0.4ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
-D, [2019-06-20T19:49:34.102960 #4824] DEBUG -- :   [1m[36mCargo Load (0.4ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-D, [2019-06-20T19:49:34.103901 #4824] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-D, [2019-06-20T19:49:34.104660 #4824] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-D, [2019-06-20T19:49:34.105814 #4824] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
-D, [2019-06-20T19:49:35.100806 #4824] DEBUG -- :   [1m[36mCargo Load (0.4ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-D, [2019-06-20T19:49:35.102343 #4824] DEBUG -- :   [1m[36mCargo Load (0.4ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-D, [2019-06-20T19:49:35.103289 #4824] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-D, [2019-06-20T19:49:35.104398 #4824] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
-D, [2019-06-20T19:49:36.098178 #4824] DEBUG -- :   [1m[36mCargo Load (0.4ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-D, [2019-06-20T19:49:36.099493 #4824] DEBUG -- :   [1m[36mCargo Load (0.4ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-D, [2019-06-20T19:49:36.100646 #4824] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-D, [2019-06-20T19:49:36.101811 #4824] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
-D, [2019-06-20T19:49:37.094433 #4824] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-D, [2019-06-20T19:49:37.095616 #4824] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
-D, [2019-06-20T19:49:37.096319 #4824] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
-D, [2019-06-20T19:49:37.097215 #4824] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:42:51.772901 #13008] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2019-06-21T13:42:51.777574 #13008] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+D, [2019-06-21T13:42:51.778043 #13008] DEBUG -- :   [1m[36mCargo Load (0.1ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+D, [2019-06-21T13:42:51.778468 #13008] DEBUG -- :   [1m[36mCargo Load (0.1ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+D, [2019-06-21T13:42:51.779543 #13008] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+D, [2019-06-21T13:42:51.780444 #13008] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+D, [2019-06-21T13:42:51.781267 #13008] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+D, [2019-06-21T13:42:51.782214 #13008] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:42:52.416566 #13008] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2019-06-21T13:42:52.418738 #13008] DEBUG -- :   [1m[36mCargo Load (0.4ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+D, [2019-06-21T13:42:52.419780 #13008] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+D, [2019-06-21T13:42:52.420719 #13008] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+D, [2019-06-21T13:42:52.421814 #13008] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+D, [2019-06-21T13:42:52.423543 #13008] DEBUG -- :   [1m[36mCargo Load (1.0ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+D, [2019-06-21T13:42:52.426741 #13008] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+D, [2019-06-21T13:42:52.427820 #13008] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:42:53.424005 #13008] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2019-06-21T13:42:53.425479 #13008] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+D, [2019-06-21T13:42:53.427029 #13008] DEBUG -- :   [1m[36mCargo Load (0.4ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+D, [2019-06-21T13:42:53.428061 #13008] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+D, [2019-06-21T13:42:53.429945 #13008] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+D, [2019-06-21T13:42:53.430899 #13008] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+D, [2019-06-21T13:42:53.433633 #13008] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+D, [2019-06-21T13:42:53.435323 #13008] DEBUG -- :   [1m[36mCargo Load (1.0ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:42:54.567609 #13008] DEBUG -- :   [1m[36mCargo Load (0.4ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:42:55.563153 #13008] DEBUG -- :   [1m[36mCargo Load (0.4ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:42:56.557180 #13008] DEBUG -- :   [1m[36mCargo Load (0.4ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:42:57.560857 #13008] DEBUG -- :   [1m[36mCargo Load (0.4ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:42:58.567865 #13008] DEBUG -- :   [1m[36mCargo Load (0.4ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:42:59.562986 #13008] DEBUG -- :   [1m[36mCargo Load (0.4ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:43:00.558064 #13008] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:43:01.564099 #13008] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:43:02.560243 #13008] DEBUG -- :   [1m[36mCargo Load (0.5ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:43:03.567262 #13008] DEBUG -- :   [1m[36mCargo Load (0.4ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:43:04.562923 #13008] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:43:05.557890 #13008] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:43:06.563050 #13008] DEBUG -- :   [1m[36mCargo Load (0.4ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:43:07.559893 #13008] DEBUG -- :   [1m[36mCargo Load (0.4ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:43:08.565803 #13008] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:43:09.561450 #13008] DEBUG -- :   [1m[36mCargo Load (0.4ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:43:10.567133 #13008] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:43:11.562919 #13008] DEBUG -- :   [1m[36mCargo Load (0.4ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:43:12.557749 #13008] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:43:13.563897 #13008] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:43:14.559576 #13008] DEBUG -- :   [1m[36mCargo Load (0.4ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:43:15.565652 #13008] DEBUG -- :   [1m[36mCargo Load (0.4ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:43:16.560915 #13008] DEBUG -- :   [1m[36mCargo Load (0.4ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:43:17.567043 #13008] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:43:18.562748 #13008] DEBUG -- :   [1m[36mCargo Load (0.4ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:43:19.566889 #13008] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:43:20.561761 #13008] DEBUG -- :   [1m[36mCargo Load (0.4ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:43:21.556803 #13008] DEBUG -- :   [1m[36mCargo Load (0.4ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:43:22.564106 #13008] DEBUG -- :   [1m[36mCargo Load (0.4ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:43:23.559553 #13008] DEBUG -- :   [1m[36mCargo Load (0.4ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:43:24.566218 #13008] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:43:25.940506 #13008] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:43:26.936323 #13008] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2019-06-21T13:43:26.937338 #13008] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+D, [2019-06-21T13:43:26.938290 #13008] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+D, [2019-06-21T13:43:26.939232 #13008] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+D, [2019-06-21T13:43:26.940169 #13008] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+D, [2019-06-21T13:43:26.941146 #13008] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+D, [2019-06-21T13:43:26.942325 #13008] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+D, [2019-06-21T13:43:26.943503 #13008] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:43:27.929184 #13008] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2019-06-21T13:43:27.930599 #13008] DEBUG -- :   [1m[36mCargo Load (0.4ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+D, [2019-06-21T13:43:27.932001 #13008] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+D, [2019-06-21T13:43:27.933388 #13008] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+D, [2019-06-21T13:43:27.934778 #13008] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+D, [2019-06-21T13:43:27.935764 #13008] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+D, [2019-06-21T13:43:27.938708 #13008] DEBUG -- :   [1m[36mCargo Load (0.3ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+D, [2019-06-21T13:43:27.939579 #13008] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
+D, [2019-06-21T13:43:28.932831 #13008] DEBUG -- :   [1m[36mCargo Load (0.4ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+D, [2019-06-21T13:43:28.934005 #13008] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+D, [2019-06-21T13:43:28.935483 #13008] DEBUG -- :   [1m[36mCargo Load (0.4ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+D, [2019-06-21T13:43:28.936547 #13008] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+D, [2019-06-21T13:43:28.937480 #13008] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+D, [2019-06-21T13:43:28.938422 #13008] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 6], ["LIMIT", 1]]
+D, [2019-06-21T13:43:28.939341 #13008] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT  "cargos".* FROM "cargos" WHERE "cargos"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+D, [2019-06-21T13:43:28.940266 #13008] DEBUG -- :   [1m[36mCargo Load (0.2ms)[0m  [1m[34mSELECT "cargos".* FROM "cargos"[0m
