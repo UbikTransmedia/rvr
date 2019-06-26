@@ -37,13 +37,19 @@ If you want to make the server public (so you can access it through any point of
 ruby rvr.rb -o 0.0.0.0 -p 4567 -env production
 ```
 
+Then visit your IP or localhost and port 4567 to see:
+
+```
+http://localhost:4567
+```
+
 # Basic concepts
 
 RiVeR is, essentially, a collection of multiuser experiments; that you can borrow to speed up the development of you own projects. It's goal is to leap the gap from single to multiplayer user experience.
 
 ## Sinatra legacy
 
-Sinatra runs within the single file from which the library is called (__rvr.rb__(9) _require 'sinatra'_).
+Sinatra runs within the single file from which the library is called (_rvr.rb_(9): __require 'sinatra'__).
 
 The _rvr.rb_ file allows you to build web routes, this way:
 
@@ -56,7 +62,7 @@ end
 
 For more information about how Sinatra handles petitions, please refer to its documentation on [routes](https://github.com/sinatra/sinatra#routes) and [views](https://github.com/sinatra/sinatra#views--templates).
 
-Sinatra also uses a convention for resource handling. You will find the HTML templates at the __/views__ folder. Resources such as images, CSS and JavaScript are found (and fully available from anywhere within Sinatra) at __public__ folder; for example, this is how you call a CSS file from the HTML templates at __/views__:
+Sinatra also uses a convention for resource handling. You will find the HTML templates at the _/views_ folder. Resources such as images, CSS and JavaScript are found (and fully available from anywhere within Sinatra) at _/public_ folder; for example, this is how you call a CSS file from the HTML templates at _/views_:
 
 ```html
 <link rel="stylesheet" type="text/css" href="css/style-cargo-sender.css">
@@ -87,19 +93,19 @@ Commonly, frameworks attempt to comprise all the similar functions in conceptual
 
 In this case, RiVeR comes with a folder called __/blocks__, which is rather the opposite. Every implementation is meant to be as independent as possible from the rest; as simple as possible overall. There are no more conventions that Sinatra's and [ActiveRecord](https://github.com/rails/rails/tree/master/activerecord)'s. The reason why is that RiVeR is not meant to be a full spectrum framework, but a launch ramp to help you skip the wikklitymikklity parts of development and focus on creating enticing [WebVR](https://webvr.info/) experiences.
 
-Current block are:
+Current blocks are:
 
 ### db_helper.rb
 Makes database connection easy. You can edit its code in order to extend persistence. It's a Ruby module with three tools:
 
 __DataBaseHelper.setup__
-Checks if database exists; otherwise, it creates it.
+> Checks if database exists; otherwise, it creates it.
 
 __DataBaseHelper.connect__
-Ìt binds you application to a given SQLite file. You can also change the addapter and parametres (more at [ActiveRecord adapter documentation](https://api.rubyonrails.org/classes/ActiveRecord/ConnectionHandling.html#method-i-establish_connection)).
+> It binds you application to a given SQLite file. You can also change the addapter and parametres (more at [ActiveRecord adapter documentation](https://api.rubyonrails.org/classes/ActiveRecord/ConnectionHandling.html#method-i-establish_connection)).
 
 __DataBaseHelper.build__
-If called, it creates the database and its tables. If you want your database to handle more types of data, this is the method you should extend.
+> If called, it creates the database and its tables. If you want your database to handle more types of data, this is the method you should extend.
 
 
 ### db_models.rb
@@ -134,13 +140,13 @@ Code loads are called "cargos", as in the [cargo cult](https://en.wikipedia.org/
 
 1. Client declares the IDs of the cargos it already has (_public/js/cargo-loader.js_: __var cargoListing__).
 2. The server compares the IDs from client with the IDs in the database. It will return a key-value listing with the proper IDs (_rvr.rb_(51): __cargo_delivery = {}__).
- 1. If the ID is already in the database, the server assumes it is the right one and appends the key with an empty value.
- 2. If the ID is not in the database, the server will no append a thing to the __cargo_delivery__.
- 3. If an ID is in the database but has not been declared by the client, the server will assume that the client needs to add that code. Hence, it will send a key equal to the ID wit ha value equal to the code to be appended.
+  1. If the ID is already in the database, the server assumes it is the right one and appends the key with an empty value.
+  2. If the ID is not in the database, the server will no append a thing to the __cargo_delivery__.
+  3. If an ID is in the database but has not been declared by the client, the server will assume that the client needs to add that code. Hence, it will send a key equal to the ID wit ha value equal to the code to be appended.
 3. Client receives and discerns wether to keep, remove or update assets.
- 1. If an ID is not in the __cargo_delivery__, it's DOM object will be removed.
- 2. If it is and the value is empty, it will be kept.
- 3. In case of receiving IDs with code, these code snippets will be added as DOM objects.
+  1. If an ID is not in the __cargo_delivery__, it's DOM object will be removed.
+  2. If it is and the value is empty, it will be kept.
+  3. In case of receiving IDs with code, these code snippets will be added as DOM objects.
 
 Note: currently, the delete function needs to be polished as cargos still do not have a class-id that let RiVeR delete them if unnecessary.
 
