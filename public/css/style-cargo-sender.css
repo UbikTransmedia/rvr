@@ -37,3 +37,8 @@ input[type="submit"] {
 div.submit-holder {
 	text-align: center !important;
 }
+
+textarea {
+	width: 100%;
+	resize: none;
+}
