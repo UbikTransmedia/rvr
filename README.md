@@ -140,13 +140,13 @@ Code loads are called "cargos", as in the [cargo cult](https://en.wikipedia.org/
 
 1. Client declares the IDs of the cargos it already has (_public/js/cargo-loader.js_: __var cargoListing__).
 2. The server compares the IDs from client with the IDs in the database. It will return a key-value listing with the proper IDs (_rvr.rb_(51): __cargo_delivery = {}__).
-  1. If the ID is already in the database, the server assumes it is the right one and appends the key with an empty value.
-  2. If the ID is not in the database, the server will no append a thing to the __cargo_delivery__.
-  3. If an ID is in the database but has not been declared by the client, the server will assume that the client needs to add that code. Hence, it will send a key equal to the ID wit ha value equal to the code to be appended.
+	1. If the ID is already in the database, the server assumes it is the right one and appends the key with an empty value.
+	2. If the ID is not in the database, the server will no append a thing to the __cargo_delivery__.
+	3. If an ID is in the database but has not been declared by the client, the server will assume that the client needs to add that code. Hence, it will send a key equal to the ID wit ha value equal to the code to be appended.
 3. Client receives and discerns wether to keep, remove or update assets.
-  1. If an ID is not in the __cargo_delivery__, it's DOM object will be removed.
-  2. If it is and the value is empty, it will be kept.
-  3. In case of receiving IDs with code, these code snippets will be added as DOM objects.
+	1. If an ID is not in the __cargo_delivery__, it's DOM object will be removed.
+	2. If it is and the value is empty, it will be kept.
+	3. In case of receiving IDs with code, these code snippets will be added as DOM objects.
 
 Note: currently, the delete function needs to be polished as cargos still do not have a class-id that let RiVeR delete them if unnecessary.
 
