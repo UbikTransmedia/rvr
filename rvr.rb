@@ -18,6 +18,10 @@ require_relative 'blocks/randos'
 
 DataBaseHelper.setup
 
+
+
+### EXPERIMENTS ###
+
 # ---------------------------------------------------------------------- Simple routes
 
 get '/'  do
@@ -46,9 +50,25 @@ post '/cargo-sender' do
 	erb :cargo_sender
 end
 
+get '/true-all-cargos' do
+	Cargo.all.each do |cargo|
+		cargo.active = true
+		cargo.save
+	end
+	erb :cargo_sender
+end
+
+get '/false-all-cargos' do
+	Cargo.all.each do |cargo|
+		cargo.active = false
+		cargo.save
+	end
+	erb :cargo_sender
+end
+
 post '/cargos-update' do
 	if request.xhr? then
-		cargo_delivery = {}
+		cargo_delivery = {'0'=>''}
 		puts params.inspect
 
 		#sanitize ---> to be fixed: when params == false, nil, etc. Review this.
@@ -63,7 +83,8 @@ post '/cargos-update' do
 				puts client_id.class
 				unless client_id == '0' then
 					begin
-						if Cargo.find(client_id) then
+						candidate_cargo = Cargo.find(client_id)
+						if candidate_cargo && candidate_cargo.active == true then
 							cargo_delivery[client_id] = ''						#CASE A: confirm symmetry client-DB: add the key, not the code
 							puts "Cargo - already exists: #{client_id}"
 						end
@@ -76,7 +97,7 @@ post '/cargos-update' do
 
 		Cargo.all.each do |cargo|
 			begin
-				if !(params["IDs"].include? cargo.id.to_s) then
+				if !(params["IDs"].include? cargo.id.to_s) && cargo.active == true then
 					cargo_delivery[cargo.id] = cargo.code					#CASE C: confirm asymmetry DB-client; add the key, add the code
 					puts "Cargo - to be added: #{cargo.id}"
 				end

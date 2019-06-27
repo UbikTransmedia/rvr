@@ -28,11 +28,19 @@
 					};
 
 					if(cargoListing["IDs"].includes(key) == false && jsonCargosFromServer[key] != ''){
+						var divClass = 'cargo-'+key;
+						console.log('Creating...');
 						var div = document.createElement('div');
 						/*div.classList.add(divClass);*/
 						/*var sanitizedContent = JSON.stringify(jsonCargosFromServer[key]);*/
-						div.innerHTML = jsonCargosFromServer[key];
-						/*div.innerHTML.firstChild.classList.add(divClass);*/
+						div.innerHTML = jsonCargosFromServer[key].trim();
+
+						console.log(div.innerHTML);
+						console.log(typeof div.innerHTML);
+						console.log(div.firstChild);
+						console.log(typeof div.firstChild);
+						/*div.innerHTML.setAttribute("class", divClass);*/
+						div.firstChild.classList.add(divClass);
 						document.getElementById("holodeck").appendChild(div.firstChild);
 						cargoListing["IDs"].push(key);
 
@@ -47,18 +55,55 @@
 
 					};
 
+
+
+
+
+
 				});
 
 
-				for (var id = 0; id < cargoListing["IDs"]; id++) {
-					// console.log('last: '+Object.keys(jsonCargosFromServer));
-					var divClass = 'cargo-'+key;
-					if(Object.keys(jsonCargosFromServer).includes(key) == false){
-						$(divClass).remove();
+				//Object.keys(jsonCargosFromServer).forEach(function(key) {
+					// for (var id = 0; id < cargoListing["IDs"].length; id++) {
+					// 	// console.log('last: '+Object.keys(jsonCargosFromServer));
+					// 	var divClass = 'cargo-'+key;
+					// 	//console.log('Time to remove: '+divClass);
+					// 	console.log(Object.keys(jsonCargosFromServer));
+					// 	console.log('key: '+key);
+					// 	console.log('key typeof: '+ typeof key); //string
+					// 	console.log('jsonCargosFromServer key typeof: '+ typeof jsonCargosFromServer[key]) //string
+					// 	//console.log('key in jsonCargosFromServer: '+ (key in Object.keys(jsonCargosFromServer)));
+						
+					// 	// if(!Object.keys(jsonCargosFromServer).includes(key)){
+					// 	// 	document.getElementsByClassName(divClass).remove();
+					// 	// 	/*$(divClass).remove();*/
+					// 	// 	console.log('Removed: '+divClass);
+					// 	// };
+
+					// 	if(!(key in jsonCargosFromServer)){
+					// 		document.getElementsByClassName(divClass).remove();
+					// 		/*$(divClass).remove();*/
+					// 		console.log('Removed: '+divClass);
+					// 	};
+
+					// };
+
+				//});
+
+
+				cargoListing["IDs"].forEach(function (id, index) {
+					var divClass = 'cargo-'+id;
+					if(!(id in jsonCargosFromServer)){
+						console.log(document.getElementsByClassName(divClass));
+						var toRemove = document.getElementsByClassName(divClass);
+						/*$(divClass).remove();*/
+						/*$('#holodeck').remove(toRemove);*/
+						toRemove.firstChild.remove();
+						console.log($('#holodeck'));
 						console.log('Removed: '+divClass);
 					};
 
-				};
+				});
 
 
 	     		/* var div = document.createElement('div');
